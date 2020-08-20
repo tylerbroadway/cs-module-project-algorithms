@@ -4,9 +4,19 @@ Returns: a List of integers
 '''
 def product_of_all_other_numbers(arr):
     # Your code here
+    products = []
 
-    pass
+    for i in range(len(arr)):
+        clone = [*arr]
+        clone.pop(i)
 
+        product = 1
+        for num in clone:
+            product *= num
+
+        products.append(product)
+        
+    return products
 
 if __name__ == '__main__':
     # Use the main function to test your implementation
